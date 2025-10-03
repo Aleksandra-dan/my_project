@@ -1,1 +1,2 @@
-# Мой проект на Python 
+# ╤Г╤А╨░ ╤Г╤А╨░ ╤Г╤А╨░ ╨┐╨╕╤В╨╛╨╜
+print('OOOOOOOOOOOOOOOOOO')
