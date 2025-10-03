@@ -68,3 +68,14 @@ print(f"Текущая дата и время: {now}")
 print(f"Только дата: {now.date()}") 
 print(f"Только время: {now.time()}") 
 print() 
+print("=== Задание 9 ===") 
+from datetime import date, timedelta 
+birthday = date(2000, 1, 1)  # ЗАМЕНИ на свою дату рождения! 
+today = date.today() 
+days_passed = (today - birthday).days 
+next_birthday = date(today.year, birthday.month, birthday.day) 
+    next_birthday = date(today.year + 1, birthday.month, birthday.day) 
+days_to_birthday = (next_birthday - today).days 
+print(f"Дней с рождения: {days_passed}") 
+print(f"Дней до следующего дня рождения: {days_to_birthday}") 
+print() 
