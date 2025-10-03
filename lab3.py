@@ -1,18 +1,18 @@
-# Лабораторная работа 3 
-print("=== Задание 1 ===") 
+# -*- coding: utf-8 -*- 
+print("=== Task 1 ===") 
 squares = [x**2 for x in range(1, 11)] 
-print("Квадраты чисел:", squares) 
+print("Squares:", squares) 
 print() 
-print("=== Задание 2 ===") 
+print("=== Task 2 ===") 
 even_numbers = [x for x in range(1, 21) if x % 2 == 0] 
-print("Четные числа:", even_numbers) 
+print("Even numbers:", even_numbers) 
 print() 
-print("=== Задание 3 ===") 
+print("=== Task 3 ===") 
 words = ["python", "Java", "c++", "Rust", "go"] 
-filtered_words = [word.upper() for word in words if len(word) 
-print("Фильтрованные слова:", filtered_words) 
+filtered_words = [word.upper() for word in words if len(word)] 
+print("Filtered words:", filtered_words) 
 print() 
-print("=== Задание 4 ===") 
+print("=== Task 4 ===") 
 class Countdown: 
     def __init__(self, n): 
         self.n = n 
@@ -24,66 +24,66 @@ class Countdown:
         current = self.n 
         self.n -= 1 
         return current 
-print("Countdown от 5:") 
+print("Countdown from 5:") 
 for x in Countdown(5): 
     print(x, end=" ") 
 print() 
 print() 
-print("=== Задание 5 ===") 
+print("=== Task 5 ===") 
 def fibonacci(n): 
     a, b = 0, 1 
     for _ in range(n): 
         yield a 
         a, b = b, a + b 
-print("Числа Фибоначчи:") 
+print("Fibonacci numbers:") 
 for num in fibonacci(5): 
     print(num, end=" ") 
 print() 
 print() 
-print("=== Задание 6 ===") 
+print("=== Task 6 ===") 
 from decimal import Decimal 
 def deposit_calculator(): 
-    P = Decimal(input("Начальная сумма вклада: ")) 
-    r = Decimal(input("Процентная ставка годовых: ")) 
-    t = Decimal(input("Срок вклада (лет): ")) 
+    P = Decimal(input("Initial deposit: ")) 
+    r = Decimal(input("Annual interest rate: ")) 
+    t = Decimal(input("Term in years: ")) 
     S = P * (1 + r / (12 * 100)) ** (12 * t) 
-    print(f"Итоговая сумма: {S:.2f} руб") 
-    print(f"Прибыль: {S - P:.2f} руб") 
-# deposit_calculator()  # раскомментируй для теста 
+    print(f"Total amount: {S:.2f} RUB") 
+    print(f"Profit: {S - P:.2f} RUB") 
+print("Deposit calculator ready") 
 print() 
-print("=== Задание 7 ===") 
+print("=== Task 7 ===") 
 from fractions import Fraction 
 a = Fraction(3, 4) 
 b = Fraction(5, 6) 
-print(f"Дроби: {a}, {b}") 
-print(f"Сложение: {a + b}") 
-print(f"Вычитание: {a - b}") 
-print(f"Умножение: {a * b}") 
-print(f"Деление: {a / b}") 
+print(f"Fractions: {a}, {b}") 
+print(f"Addition: {a + b}") 
+print(f"Subtraction: {a - b}") 
+print(f"Multiplication: {a * b}") 
+print(f"Division: {a / b}") 
 print() 
-print("=== Задание 8 ===") 
+print("=== Task 8 ===") 
 from datetime import datetime 
 now = datetime.now() 
-print(f"Текущая дата и время: {now}") 
-print(f"Только дата: {now.date()}") 
-print(f"Только время: {now.time()}") 
+print(f"Current datetime: {now}") 
+print(f"Date only: {now.date()}") 
+print(f"Time only: {now.time()}") 
 print() 
-print("=== Задание 9 ===") 
-from datetime import date, timedelta 
-birthday = date(2000, 1, 1)  # ЗАМЕНИ на свою дату рождения! 
-today = date.today() 
-days_passed = (today - birthday).days 
-next_birthday = date(today.year, birthday.month, birthday.day) 
-    next_birthday = date(today.year + 1, birthday.month, birthday.day) 
-days_to_birthday = (next_birthday - today).days 
-print(f"Дней с рождения: {days_passed}") 
-print(f"Дней до следующего дня рождения: {days_to_birthday}") 
-print() 
-print("=== Задание 10 ===") 
+print("=== Task 9 ===")
+from datetime import date
+birthday = date(2005, 11, 7)  
+today = date.today()
+days_passed = (today - birthday).days
+next_birthday = date(today.year, birthday.month, birthday.day)
+if next_birthday < today:
+    next_birthday = date(today.year + 1, birthday.month, birthday.day)
+days_to_birthday = (next_birthday - today).days
+print(f"Days since birth: {days_passed}")
+print(f"Days to next birthday: {days_to_birthday}")
+print()
+print("=== Task 10 ===") 
 def format_date(dt): 
-    months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 
-              'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'] 
-    return f'Сегодня {dt.day} {months[dt.month-1]} {dt.year} года, время: {dt.strftime("%H:%M")}' 
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 
+              'July', 'August', 'September', 'October', 'November', 'December'] 
+    return f'Today is {dt.day} {months[dt.month-1]} {dt.year}, time: {dt.strftime("%H:%M")}' 
 now = datetime.now() 
 print(format_date(now)) 
-print() 
