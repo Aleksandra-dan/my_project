@@ -12,3 +12,20 @@ words = ["python", "Java", "c++", "Rust", "go"]
 filtered_words = [word.upper() for word in words if len(word) 
 print("Фильтрованные слова:", filtered_words) 
 print() 
+print("=== Задание 4 ===") 
+class Countdown: 
+    def __init__(self, n): 
+        self.n = n 
+    def __iter__(self): 
+        return self 
+    def __next__(self): 
+        if self.n == 0: 
+            raise StopIteration 
+        current = self.n 
+        self.n -= 1 
+        return current 
+print("Countdown от 5:") 
+for x in Countdown(5): 
+    print(x, end=" ") 
+print() 
+print() 
