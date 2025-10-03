@@ -40,3 +40,14 @@ for num in fibonacci(5):
     print(num, end=" ") 
 print() 
 print() 
+print("=== Задание 6 ===") 
+from decimal import Decimal 
+def deposit_calculator(): 
+    P = Decimal(input("Начальная сумма вклада: ")) 
+    r = Decimal(input("Процентная ставка годовых: ")) 
+    t = Decimal(input("Срок вклада (лет): ")) 
+    S = P * (1 + r / (12 * 100)) ** (12 * t) 
+    print(f"Итоговая сумма: {S:.2f} руб") 
+    print(f"Прибыль: {S - P:.2f} руб") 
+# deposit_calculator()  # раскомментируй для теста 
+print() 
