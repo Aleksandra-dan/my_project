@@ -51,3 +51,13 @@ def deposit_calculator():
     print(f"Прибыль: {S - P:.2f} руб") 
 # deposit_calculator()  # раскомментируй для теста 
 print() 
+print("=== Задание 7 ===") 
+from fractions import Fraction 
+a = Fraction(3, 4) 
+b = Fraction(5, 6) 
+print(f"Дроби: {a}, {b}") 
+print(f"Сложение: {a + b}") 
+print(f"Вычитание: {a - b}") 
+print(f"Умножение: {a * b}") 
+print(f"Деление: {a / b}") 
+print() 
