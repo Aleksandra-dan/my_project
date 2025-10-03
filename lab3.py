@@ -29,3 +29,14 @@ for x in Countdown(5):
     print(x, end=" ") 
 print() 
 print() 
+print("=== Задание 5 ===") 
+def fibonacci(n): 
+    a, b = 0, 1 
+    for _ in range(n): 
+        yield a 
+        a, b = b, a + b 
+print("Числа Фибоначчи:") 
+for num in fibonacci(5): 
+    print(num, end=" ") 
+print() 
+print() 
