@@ -113,4 +113,5 @@ if __name__ == "__main__":
     # Вызов метода move() для каждого объекта
     print("Вызов метода move() для всех транспортных средств:")
     for vehicle in vehicles:
+
         vehicle.move()
