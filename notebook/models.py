@@ -4,9 +4,9 @@ from typing import List, Optional
 
 
 class Note:
-    def __init__(self, title: str, content: str, tags: List[str] = None,
-                 status: str = "active", priority: str = "medium",
-                 created_at: Optional[str] = None, note_id: Optional[int] = None):
+    def __init__(self, note_id: int, title: str, content: str,
+                 tags: Optional[List[str]] = None, status: str = "active",
+                 priority: str = "medium", created_at: Optional[str] = None):
         self.note_id = note_id
         self.title = title
         self.content = content
@@ -16,7 +16,6 @@ class Note:
         self.created_at = created_at or datetime.now().isoformat()
 
     def to_dict(self) -> dict:
-        """Преобразует заметку в словарь"""
         return {
             'id': self.note_id,
             'title': self.title,
@@ -29,7 +28,6 @@ class Note:
 
     @classmethod
     def from_dict(cls, data: dict) -> 'Note':
-        """Создает заметку из словаря"""
         return cls(
             note_id=data['id'],
             title=data['title'],
@@ -47,5 +45,4 @@ class Note:
                 f"Tags: {', '.join(self.tags)}\n"
                 f"Status: {self.status}\n"
                 f"Priority: {self.priority}\n"
-                f"Created: {self.created_at[:16]}\n"
-                f"{'-' * 40}")
+                f"Created: {self.created_at}\n")

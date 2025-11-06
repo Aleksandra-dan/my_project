@@ -6,8 +6,8 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'notebook=notebook.commands:main',
+            'notebook=notebook.main:main',
         ],
     },
-    python_requires='>=3.6',
+    install_requires=[],
 )
